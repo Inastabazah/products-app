@@ -1,0 +1,16 @@
+
+.filter-col{
+  flex: 3;
+  flex-basis: 150px;
+}
+.action-col{
+  flex: 1;
+  flex-basis: 150px;
+  text-align: end;
+}
+.action-col  button {
+  margin-inline-start: 10px;
+}
+ tr{
+  cursor:pointer;
+ }

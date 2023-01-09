@@ -1,0 +1,39 @@
+
+    <div class="main">
+      <div class="login-card" class="input-group">
+
+
+        <form [formGroup]="formGroup">
+          <h3>Login</h3>
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email" formControlName="email" type="email" >
+          <mat-error *ngIf="email.invalid">
+            {{getEmailErrorMsg()}}
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Enter Password</mat-label>
+          <input matInput placeholder="password" formControlName="password" type="password" >
+          <mat-error *ngIf="password.invalid">
+            {{getPasswordErrorMsg()}}
+          </mat-error>
+        </mat-form-field>
+        <mat-checkbox class="check-box"class="check-box" color="warn"
+        formControlName="i_agree"
+        (change)="onChangeEvent($event)"
+          ><span>Remember Password</span></mat-checkbox
+        >
+
+        <button
+          mat-raised-button
+          class="submit-btn"
+          color="primary"
+          (click)="logInClicked()"
+        >
+        Log In
+        </button>
+        </form>
+      </div>
+
+    </div>

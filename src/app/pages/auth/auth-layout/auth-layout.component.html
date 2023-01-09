@@ -1,0 +1,14 @@
+<div class="button-box">
+  <div id="btn"> </div>
+  <button  class="toggle-btn" (click)="login()" ><span>Login</span></button>
+  <button class="toggle-btn"(click)="register()"><span>Signup</span></button>
+
+</div>
+
+<div [@routeAnimations]="o && o.activatedRouteData
+      && o.activatedRouteData['animation']">
+    <router-outlet #o="outlet"></router-outlet>
+</div>
+
+
+

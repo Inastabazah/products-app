@@ -1,0 +1,57 @@
+<div class="main">
+  <div class="signup-card" class="input-group">
+
+
+<form [formGroup]="formGroup">
+  <h3>Signup</h3>
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+
+    <mat-error *ngIf="name.invalid">
+      Name is <strong>required</strong>
+    </mat-error><input matInput placeholder="Name" type="text" formControlName="name"  >
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Email"  formControlName="email" type="email" >
+    <mat-error *ngIf="email.invalid">
+      {{getEmailErrorMsg()}}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label >Enter Password</mat-label>
+
+
+    <mat-error *ngIf="password.invalid">
+      {{getPasswordErrorMsg()}}
+    </mat-error> <input matInput placeholder="password"   formControlName="password"type="password" >
+  </mat-form-field>
+
+
+
+  <div (click)="uploadFile.click()">
+    <button mat-raised-button >  Upload Logo </button>
+    <input #uploadFile (change)="upload($event)" type='file' style="display:none " accept="*.png" formControlName="logo" >
+ </div>
+
+  <mat-checkbox class="check-box" color="warn"
+  formControlName="i_agree"
+  (change)="onChangeEvent($event)">
+    ><span>I agree to the terms & conditions</span></mat-checkbox
+  >
+
+
+
+    <button
+      mat-raised-button
+      class="submit-btn"
+      color="primary"
+      (click)="signUpClicked()"
+    >
+      Signup
+    </button>
+  </form>
+  </div>
+</div>

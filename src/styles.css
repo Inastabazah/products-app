@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+main{
+  text-align: center;
+  position: relative;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  }
+.full-width{
+  width :100%;
+}
+
+
+table{
+  width: 100%;
+}
+.actions-section{
+  text-align: end;
+  margin-inline-start: 10px;
+}
+.back-text{
+  cursor: pointer;
+}
+
+.back-text:hover{
+ color: rgb(141, 86, 193);
+}

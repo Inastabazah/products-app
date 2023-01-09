@@ -1,0 +1,42 @@
+.col {
+  flex: 1 1 auto;
+}
+
+mat-sidenav-container{
+  height:100vh ;
+
+}
+mat-sidenav{
+  width: 300px;
+  background-color: #8270c1;
+  color: #fff;
+  padding: 1rem;
+
+
+}
+
+main{
+  padding: 1rem;
+  min-height:calc(100vh - 66px);
+
+}
+.child-items{
+margin-inline-start: 24px !important;
+}
+
+a{
+  text-decoration: none;
+}
+mat-icon{
+  color: #fff;
+  margin-inline-end: 10px;
+}
+
+item-text{
+  color: #fff;
+  font-weight:600 ;
+}
+.content{
+  padding: 0.8rem;
+  min-height: 100%;
+}
